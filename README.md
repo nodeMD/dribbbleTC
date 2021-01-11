@@ -11,6 +11,14 @@ To run the tests concurrently (two instances of the same browser): `npm test -- 
 
 To run all tests on all installed browsers (in parallel): `npm run allBrowsers`
 
+# Docker
+
+To run on docker:
+
+`run docker build -t netguru .`
+
+`docker run -d netguru`
+
 # What is tested:
 
 Upload:
