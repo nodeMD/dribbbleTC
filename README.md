@@ -1,4 +1,4 @@
-# TestCafe example test projects
+# TestCafe example test project
 
 # What is tested:
 
