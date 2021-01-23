@@ -1,4 +1,4 @@
-# Netguru QA Task
+# TestCafe example test projects
 
 # What is tested:
 
@@ -24,6 +24,6 @@ To run all tests on all installed browsers (in parallel): `npm run allBrowsers`
 
 To run on docker:
 
-`run docker build -t netguru .`
+`run docker build -t tests .`
 
-`docker run -d netguru`
+`docker run -d tests`

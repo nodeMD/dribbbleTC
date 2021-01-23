@@ -1,7 +1,7 @@
 {
-  "name": "netguru_test",
+  "name": "testcafe_example",
   "version": "1.0.0",
-  "description": "QA task for Netguru",
+  "description": "Example E2E tests written with TestCafe",
   "main": "index.js",
   "scripts": {
     "test": "testcafe chrome tests/*.js --skip-js-errors",
