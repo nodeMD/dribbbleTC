@@ -7,8 +7,6 @@ export default class SearchPage {
         this.colorInput = Selector('#color')
         this.madeWithDropdown = Selector('.find-shots-made-with > span.btn-dropdown')
         this.downloadsDropdown = Selector('.find-shots-source-files > span.btn-dropdown')
-        this.allAppsOption = Selector('li > a').withExactText('All Apps')
-        this.allShotsOption = Selector('li > a').withExactText('All Shots')
         this.selectOption = async (option) =>  Selector('li > a').withExactText(option)
         this.resultsLinks = Selector('.shots-grid a.dribbble-link.shot-thumbnail-link')
 
