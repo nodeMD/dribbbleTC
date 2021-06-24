@@ -9,7 +9,9 @@ User is able to upload new file and check that it was uploaded properly.
 
 Search form:
 User is able to search for new dribbbles and check that there are results for given search parameters.
+
 # Start
+
 `npm install`
 
 To run all tests on chrome: `npm test`

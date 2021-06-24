@@ -1,0 +1,10 @@
+{
+    "plugins": [
+        "testcafe"
+    ],
+    "extends": "plugin:testcafe/recommended",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": "2020"
+    }
+}

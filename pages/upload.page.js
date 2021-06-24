@@ -1,33 +1,35 @@
-import { t, Selector } from 'testcafe'
+import { t, Selector } from "testcafe";
 
 export default class UploadPage {
-    constructor() {
-        this.fileInput = Selector('input.drag-drop-input')
-        this.titleInput = Selector('input.dd-input')
-        this.descriptionInput = Selector('textarea.dd-input')
-        this.tagInput = Selector('.selectize-input')
-        this.tagDropdownOption = async (tagText) => Selector('.option').withExactText(tagText)
-        this.noFeedbackCheckbox = Selector('input').withAttribute('type', 'checkbox')
-        this.publishButton = Selector('.dd-btn > span').withExactText('Publish to Dribbble Draft')
+  constructor() {
+    this.fileInput = Selector("input.drag-drop-input");
+    this.titleInput = Selector("#title");
+    this.descriptionInput = Selector("#description");
+    this.tagInput = Selector("input.selectMode");
+    this.tagDropdownOption = async (tagText) =>
+      Selector(".option").withExactText(tagText);
+    this.noFeedbackCheckbox = Selector("input").withAttribute(
+      "type",
+      "checkbox"
+    );
+    this.continueButton = Selector("button").withExactText("Continue");
+    this.publishButton = Selector("button").withExactText("Publish now");
 
-        this.uploadFile = async (filePath) => {
-            await t.setFilesToUpload(this.fileInput, filePath)
-        }
+    this.uploadFile = async (filePath) => {
+      await t.setFilesToUpload(this.fileInput, filePath);
+    };
 
-        this.fillFileDetails = async (title, tag, description) => {
-            await t
-                .typeText(this.titleInput, title)
-                .typeText(this.tagInput, tag)
-                .click(await this.tagDropdownOption(tag))
-                .typeText(this.descriptionInput, description)
-        }
+    this.fillFileDetails = async (title, description, tag) => {
+      await t
+        .typeText(this.titleInput, title)
+        .typeText(this.descriptionInput, description)
+        .click(this.continueButton)
+        .typeText(this.tagInput, tag)
+        .click(this.noFeedbackCheckbox);
+    };
 
-        this.checkNoFeedbackBox = async () => {
-            await t.click(this.noFeedbackCheckbox)
-        }
-
-        this.publishFile = async () => {
-            await t.click(this.publishButton)
-        }
-    }
+    this.publishFile = async () => {
+      await t.click(this.publishButton);
+    };
+  }
 }

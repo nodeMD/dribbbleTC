@@ -6,12 +6,19 @@
   "scripts": {
     "test": "testcafe chrome tests/*.js --skip-js-errors",
     "test:h": "testcafe chrome:headless tests/*.js --skip-js-errors",
-    "allBrowsers": "testcafe all tests/*.js --skip-js-errors"
+    "allBrowsers": "testcafe all tests/*.js --skip-js-errors",
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "Maciej Dynieski",
   "license": "ISC",
   "dependencies": {
-    "testcafe": "^1.10.1"
+    "eslint-plugin-testcafe": "^0.2.1",
+    "prettier": "^2.3.1",
+    "testcafe": "^1.14.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0"
   }
 }
