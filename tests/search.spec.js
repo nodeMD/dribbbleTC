@@ -16,7 +16,7 @@ fixture`Dribbble search fixture`.page`https://dribbble.com`
     await header.signOut();
   });
 
-test.skip("User is able to search for a dribbbles with given params", async (t) => {
+test("User is able to search for a dribbbles with given params", async (t) => {
   const tag = "green";
   const color = "30E849";
   const madeWith = "All Apps";
